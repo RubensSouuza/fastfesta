@@ -12,19 +12,62 @@
 </ion-header>
 
 <ion-content>
-  <ion-list lines="none">
-    <ion-item>
-      <h1>Kit festa para 10 pessoas</h1>
-    </ion-item>
-    <ion-item>
-      <p>Mou Musse</p>
-      <p>R$190,90</p>
-    </ion-item>
-    <ion-item>
-      <ion-button>
-        <ion-icon name="trash"></ion-icon>
-        <ion-label>Excluir</ion-label>
-      </ion-button>
-    </ion-item>
-  </ion-list>
+  <ion-card>
+    <div class="img"></div>
+    <ion-list lines="full">
+      <ion-item>
+        <span slot="start">1 x</span>
+        <p class="produto">Kit Festa para 10 pessoas</p>
+        <p class="preco" slot="end">R$199,90</p>
+      </ion-item>
+    </ion-list>
+
+    <ion-card-content>
+      <ion-text color="medium" size="small">Fornecedor: Mou Musse</ion-text>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <div class="img"></div>
+    <ion-list lines="full">
+      <ion-item>
+        <span slot="start">1 x</span>
+        <p class="produto">Kit Festa para 10 pessoas</p>
+        <p class="preco" slot="end">R$199,90</p>
+      </ion-item>
+    </ion-list>
+
+    <ion-card-content>
+      <ion-text color="medium">Fornecedor: Mou Musse</ion-text>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <div class="img"></div>
+    <ion-list lines="full">
+      <ion-item>
+        <span slot="start">1 x</span>
+        <p class="produto">Kit Festa para 10 pessoas</p>
+        <p class="preco" slot="end">R$199,90</p>
+      </ion-item>
+    </ion-list>
+
+    <ion-card-content>
+      <ion-text color="medium">Fornecedor: Mou Musse</ion-text>
+    </ion-card-content>
+  </ion-card>
+
+  
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-item lines="none">
+      <h2>Preço Total: </h2>
+      <h1 slot="end">R$399,80</h1>
+    </ion-item>
+  
+    <ion-button expand="full">Finalizar compra</ion-button>
+    <ion-button expand="full" color="light">Continuar comprando</ion-button>
+  </ion-toolbar>
+</ion-footer>
