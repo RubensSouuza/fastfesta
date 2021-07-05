@@ -1,0 +1,89 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+ion-header {
+  ion-item {
+    margin: 1rem 1rem 0 1rem;
+  }
+
+  ion-buttons {
+    ion-button {
+      text-align: center;
+      text-transform: none;
+
+      p {
+        font-size: 10px;
+        font-weight: 700;
+        color: var(--red);
+      }
+
+      ion-icon {
+        padding-left: 0.2rem;
+        color: var(--red);
+      }
+    }
+  }
+  
+}
+
+ion-content {
+  --padding-top: 0.5rem;
+  --padding-start: 2rem;
+  --padding-end: 1.5rem;
+}
+
+ion-menu {
+  ion-content {
+    --padding-start: 2rem;
+    --padding-top: 2rem;
+
+    ion-item {
+      --padding-top: 0;
+      margin-top: 1rem;
+    }
+
+    .logout {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      --padding-top: 3rem;
+
+      ion-label {
+        padding: 1rem;
+      }
+    }
+  }
+}
+
+ion-menu-button {
+  --color: var(--red);
+  --background: #eeeeee50;
+  --border-radius: 15px;
+}
+
+
+

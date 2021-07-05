@@ -1,0 +1,55 @@
+<!-- <ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-back-button slot="start" size="small" fill="none" (click)="dismiss()">
+      <ion-icon name="chevron-back-outline"></ion-icon>
+      <ion-title>Voltar</ion-title>
+    </ion-back-button>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home" (click)="dismiss()"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="none">
+    <ion-item class="fornecedor">
+      <ion-avatar slot="start">
+        <img src="https://image.freepik.com/vetores-gratis/fundo-de-comida-de-mao-desenhada_52683-2954.jpg">
+      </ion-avatar>
+      <ion-label>
+        <h1>Delikata Festas</h1>
+        <img src="../../assets/img/avaliacao.png" alt="">
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <img src="../../assets/img/docinho.jpg">
+  <ion-title>Kit festa para 10 pessoas</ion-title>
+  <ion-text>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat temporibus eum incidunt doloremque molestias repellat minus quisquam.
+  </ion-text>
+
+  <ion-grid class="ion-margin-top ion-margin-bottom">
+    <ion-row class="ion-align-items-center">
+      <ion-col>
+        <ion-input type="number" value="1" #addCarrinho></ion-input>
+      </ion-col>
+
+      <ion-col>
+        <ion-button size="small"(click)="addItem()">
+          <ion-icon name="add" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-button expand="block">
+    <ion-icon name="cart" class="ion-margin"></ion-icon>
+    Adicionar ao carrinho
+  </ion-button>
+</ion-content>
