@@ -1,5 +1,7 @@
 {
-  "name": "myApp",
-  "integrations": {},
+  "name": "appFastFestas",
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

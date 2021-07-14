@@ -6,22 +6,22 @@ const routes: Routes = [
   {
     path: 'tabs',
     component: TabsPage,
-    children: [      
+    children: [
       {
         path: 'home',
-        loadChildren: () => import('../home/home.module').then( m => m.HomePageModule)
+        loadChildren: () => import('../pages/home/home.module').then(m => m.HomePageModule)
       },
       {
-        path: 'carrinho',
-        loadChildren: () => import('../carrinho/carrinho.module').then( m => m.CarrinhoPageModule)
+        path: 'cart',
+        loadChildren: () => import('../pages/cart/cart.module').then(m => m.CartPageModule)
       },
       {
-        path: 'pesquisa',
-        loadChildren: () => import('../pesquisa/pesquisa.module').then( m => m.PesquisaPageModule)
+        path: 'search',
+        loadChildren: () => import('../pages/search/search.module').then(m => m.SearchPageModule)
       },
       {
-        path: 'perfil',
-        loadChildren: () => import('../perfil/perfil.module').then( m => m.PerfilPageModule)
+        path: 'profile',
+        loadChildren: () => import('../pages/profile/profile.module').then(m => m.ProfilePageModule)
       },
       {
         path: '',
@@ -40,4 +40,4 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forChild(routes)],
 })
-export class TabsPageRoutingModule {}
+export class TabsPageRoutingModule { }

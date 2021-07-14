@@ -1,0 +1,43 @@
+<app-header></app-header>
+
+<ion-content>
+   <ion-slides [options]="slideOpts">
+      <ion-slide>
+         <img src="https://image.freepik.com/vetores-gratis/modelo-de-banner-de-fabrica-de-bolo_23-2148861831.jpg">
+      </ion-slide>
+      <ion-slide>
+         <img
+            src="https://p2.trrsf.com/image/fget/cf/600/400/images.terra.com/2020/10/21/bolo-de-chocolate-confeitado-50853-1024x752.jpg">
+      </ion-slide>
+   </ion-slides>
+
+   <ion-slides [options]="slideCategoryOpts" class="ion-padding">
+      <ion-slide *ngFor="let item of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]" class="category">
+         <ion-avatar>
+            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+         </ion-avatar>
+         <ion-label>Bolos</ion-label>
+      </ion-slide>
+   </ion-slides>
+
+   <ion-list>
+      <ion-item lines="full" class="ion-no-padding">
+         <ion-button fill="clear" color="dark" slot="end" (click)="presentFilter($event)">
+            <ion-label>Filtro</ion-label>
+            <ion-icon name="chevron-down-outline"></ion-icon>
+         </ion-button>
+      </ion-item>
+
+      <ion-item button *ngFor="let item of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]" routerLink="/details">
+         <ion-thumbnail slot="end">
+            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+         </ion-thumbnail>
+
+         <ion-label class="ion-padding-top ion-padding-bottom">
+            <h2>Kit Festa para 10 Pessoas</h2>
+            <ion-text color="primary">{{ '199.99' | currency: 'BRL' }}</ion-text>
+         </ion-label>
+
+      </ion-item>
+   </ion-list>
+</ion-content>

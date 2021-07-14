@@ -1,0 +1,31 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="ion-text-center">
+    <ion-title color="primary">Fast Festas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="ion-padding-start ion-padding-end ion-padding-top" lines="none">
+    <ion-item class="light-background ion-margin-bottom">
+      <ion-input type="text" placeholder="E-mail"></ion-input>
+    </ion-item>
+
+    <ion-item class="light-background">
+      <ion-input type="password" placeholder="Senha"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-note slot="end">Esqueceu a senha?</ion-note>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" class="ion-padding-start ion-padding-end" (click)="login()">Entrar</ion-button>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="ion-text-center">
+    <ion-label color="medium">
+      Ainda não tem uma conta? <ion-text color="primary" (click)="presentRegister()">Cadastre-se</ion-text>
+    </ion-label>
+  </ion-toolbar>
+</ion-footer>

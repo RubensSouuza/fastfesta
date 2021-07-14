@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IonTabs } from '@ionic/angular';
 
 @Component({
@@ -7,19 +7,13 @@ import { IonTabs } from '@ionic/angular';
   styleUrls: ['tabs.page.scss']
 })
 export class TabsPage {
-
   @ViewChild(IonTabs) tabs: IonTabs;
-
   selected = '';
 
-  constructor() {
-    
-  }
+  constructor() { }
 
   setSelectedTab() {
     this.selected = this.tabs.getSelected();
   }
-
-  
 
 }
