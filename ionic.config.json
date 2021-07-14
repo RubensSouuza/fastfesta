@@ -1,7 +1,5 @@
 {
   "name": "appFastFestas",
-  "integrations": {
-    "capacitor": {}
-  },
+  "integrations": {},
   "type": "angular"
 }

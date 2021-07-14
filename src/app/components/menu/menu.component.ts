@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuController } from '@ionic/angular';
+import { LoadingController, MenuController, ToastController } from '@ionic/angular';
+import { User } from 'src/app/interfaces/user';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,23 +9,39 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent implements OnInit {
+  private loading: any;
 
-  constructor(private menu: MenuController) { }
+  constructor(
+    private authService: AuthService,
+    private toastCtrl: ToastController,
+    private loadingCtrl: LoadingController,
+    private menuCtrl: MenuController
+
+  ) { }
 
   ngOnInit() {}
 
-  openFirst() {
-    this.menu.enable(true, 'first');
-    this.menu.open('first');
+  async logout() {
+    await this.presentLoading();
+
+    try {
+      await this.authService.logout();
+    } catch(error) {
+      this.presentToast(error.message);
+    } finally {
+      this.loading.dismiss();
+      this.menuCtrl.close();
+    }
   }
 
-  openEnd() {
-    this.menu.open('end');
+   async presentLoading() {
+    this.loading = await this.loadingCtrl.create({ message: 'Aguarde....' });
+    return this.loading.present();
   }
 
-  openCustom() {
-    this.menu.enable(true, 'custom');
-    this.menu.open('custom');
+  async presentToast(message: string) {
+    const toast = await this.toastCtrl.create({ message, duration: 2000, color: 'danger'});
+    return toast.present();
   }
 
 }

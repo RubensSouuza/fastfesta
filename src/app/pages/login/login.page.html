@@ -7,11 +7,11 @@
 <ion-content>
   <ion-list class="ion-padding-start ion-padding-end ion-padding-top" lines="none">
     <ion-item class="light-background ion-margin-bottom">
-      <ion-input type="text" placeholder="E-mail"></ion-input>
+      <ion-input type="email" placeholder="E-mail" [(ngModel)]="userLogin.email"></ion-input>
     </ion-item>
 
     <ion-item class="light-background">
-      <ion-input type="password" placeholder="Senha"></ion-input>
+      <ion-input type="password" placeholder="Senha" [(ngModel)]="userLogin.password"></ion-input>
     </ion-item>
 
     <ion-item lines="none">
