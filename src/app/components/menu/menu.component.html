@@ -1,0 +1,38 @@
+<ion-menu contentId="menu">
+  <ion-content class="ion-padding">
+    <ion-list lines="none">
+      <ion-item>
+        <ion-label>Home</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Festa Pronta</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Kit Personalizado</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Fotos e Vídeos</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Serviços Diversos</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Fantasias</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
+  <ion-footer class="ion-no-border">
+    <ion-toolbar>
+      <ion-button color="danger" class="ion-margin" fill="clear" (click)="logout()">
+        <ion-icon name="log-out" slot="start"></ion-icon>
+        <ion-label>Logout</ion-label>
+      </ion-button>
+    </ion-toolbar>
+  </ion-footer>
+</ion-menu>
