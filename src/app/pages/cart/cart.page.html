@@ -1,0 +1,39 @@
+<app-header></app-header>
+
+<ion-content>
+   <div class="cards ion-padding">
+      <ion-card *ngFor="let item of [0, 1, 2]">
+         <div class="img"></div>
+
+         <ion-list lines="full">
+            <ion-item>
+               <span slot="start">1 x</span>
+               <p class="produto">Kit Festa para 10 pessoas</p>
+               <p class="preco" slot="end">R$199,90</p>
+            </ion-item>
+         </ion-list>
+
+         <ion-card-content class="ion-no-padding">
+            <ion-item lines="none">
+               <ion-text color="medium" size="small">Fornecedor: Mou Musse</ion-text>
+
+               <ion-button fill="clear" slot="end">
+                  <ion-icon name="trash" slot="icon-only"></ion-icon>
+               </ion-button>
+            </ion-item>
+         </ion-card-content>
+      </ion-card>
+   </div>
+</ion-content>
+
+<ion-footer class="ion-padding">
+   <ion-toolbar>
+      <ion-item lines="none">
+         <h3>Preço Total: </h3>
+         <h2 slot="end">R$399,80</h2>
+      </ion-item>
+
+      <ion-button expand="full">Finalizar compra</ion-button>
+      <ion-button expand="full" color="light">Continuar comprando</ion-button>
+   </ion-toolbar>
+</ion-footer>

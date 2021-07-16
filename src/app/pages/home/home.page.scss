@@ -1,0 +1,16 @@
+ion-list {
+   padding: 0px 10px 10px 10px;
+}
+
+.category {
+   display: flex;
+   flex-direction: column;
+   padding-top: 10px;
+
+   ion-label {
+      margin: 5px;
+      font-size: 14px;
+   }
+}
+
+

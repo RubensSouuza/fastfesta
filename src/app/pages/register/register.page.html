@@ -1,0 +1,30 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar (click)="dismiss()">
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="chevron-down-outline" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title color="primary">Cadastro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="ion-padding-start ion-padding-end ion-padding-top" lines="none">
+    <ion-item class="light-background ion-margin-bottom">
+      <ion-input type="email" placeholder="Nome"></ion-input>
+    </ion-item>
+
+    <ion-item class="light-background ion-margin-bottom">
+      <ion-input type="email" placeholder="E-mail" [(ngModel)]="userRegister.email"></ion-input>
+    </ion-item>
+
+    <ion-item class="light-background">
+      <ion-input type="password" placeholder="Senha" [(ngModel)]="userRegister.password"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-button expand="block" class="ion-padding-start ion-padding-end" (click)="register()">Cadastrar</ion-button>
+</ion-content>

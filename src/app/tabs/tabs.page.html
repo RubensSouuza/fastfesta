@@ -1,0 +1,23 @@
+<ion-tabs (ionTabsDidChange)="setSelectedTab()">
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home">
+      <ion-icon [name]="selected == 'home' ? 'home' : 'home-outline'"></ion-icon>
+      <ion-label [style.font-weight]="selected == 'home' ? 700 : 400">Home</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="cart">
+      <ion-icon [name]="selected == 'cart' ? 'cart' : 'cart-outline'"></ion-icon>
+      <ion-label [style.font-weight]="selected == 'cart' ? 700 : 400">Carrinho</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="search">
+      <ion-icon [name]="selected == 'search' ? 'search' : 'search-outline'"></ion-icon>
+      <ion-label [style.font-weight]="selected == 'search' ? 700 : 400">Pesquisar</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="profile">
+      <ion-icon [name]="selected == 'profile' ? 'person-circle' : 'person-circle-outline'"></ion-icon>
+      <ion-label [style.font-weight]="selected == 'profile' ? 700 : 400">Perfil</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
